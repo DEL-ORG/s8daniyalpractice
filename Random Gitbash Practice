@@ -1,0 +1,100 @@
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git status
+On branch FixTemp
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   secret recipe.htm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git connit -a -m "updated temp for baking instructions"
+git: 'connit' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        config
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git connit -a -m "updated temp for baking instructions"
+git: 'connit' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        config
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git connit -a -m "updated temp for baking instructions"
+git: 'connit' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        config
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git commit -a -m "updated temp for baking instructions"
+[FixTemp 455be7c] updated temp for baking instructions
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git switch main
+fatal: invalid reference: main
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (FixTemp)
+$ git switch master
+Switched to branch 'master'
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ git merge -m "Merge FixTemp back to master" FixTemp
+Updating 58c449a..455be7c
+Fast-forward (no commit created; -m option ignored)
+ secret recipe.htm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ git branch -d FixTemp
+Deleted branch FixTemp (was 455be7c).
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ Git branch
+* master
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ git switch -c UpdateText
+Switched to a new branch 'UpdateText'
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (UpdateText)
+$ git branch
+* UpdateText
+  master
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (UpdateText)
+$ git commit -a -m "update index text"
+[UpdateText 927e0a6] update index text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (UpdateText)
+$ git switch master
+Switched to branch 'master'
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ git commit -a -m "update index text"
+[master 4afecdd] update index text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ git merge UpdateText
+Auto-merging index.htm
+CONFLICT (content): Merge conflict in index.htm
+Automatic merge failed; fix conflicts and then commit the result.
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master|MERGING)
+$ git commit -a -m "update text on index"
+[master ec31173] update text on index
+
+danki@VADER MINGW64 ~/Dropbox/PC/Downloads/GitBash Practice (master)
+$ Git branch -d UpdateText
+Deleted branch UpdateText (was 927e0a6).
+
